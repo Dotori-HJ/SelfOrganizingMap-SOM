@@ -9,12 +9,11 @@ Code is written in Python 3.6 and requires:
 
 
 ## Run the example
-`(Back quote)python main.py --train --color   
+`(Back quote) python main.py --train --color   
   
-`(Back quote)python main.py --train --mnist  
+`(Back quote) python main.py --train --mnist  
 
-
-`(Back quote)python main.py --train --fashion_mnist  
+`(Back quote) python main.py --train --fashion_mnist  
 ## Examples
 
 ![Color](results/color/color_result.png)  
