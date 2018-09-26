@@ -37,11 +37,11 @@ python main.py --train --color
   
 #### Fashion-MNIST
   
-* Animation
+* Animation  
 ![Fahsion-MNIST](results/fashion_mnist/som_animation.gif)
-* Result Image
+* Result Image  
 ![Fahsion-MNIST](results/fashion_mnist/som_result.png)
 
     
-#### Color
+#### Color  
 ![Color](results/color/color_result.png) 
