@@ -63,6 +63,9 @@ if __name__ == '__main__':
         else:
             print('Please set specify dataset. --mnist, --fashion_mnist')
             exit(0)
+    
+    train_data.train_data = train_data.train_data[:5000]
+    train_data.train_labels = train_data.train_labels[:5000]
 
     print('Building Model...')
     som = SOM(input_size=28 * 28 * 1, out_size=(row, col))
