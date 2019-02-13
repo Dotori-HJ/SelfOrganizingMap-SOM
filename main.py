@@ -28,7 +28,7 @@ if __name__ == '__main__':
     parser.add_argument('--batch_size', type=int, default=32, help='input batch size')
     parser.add_argument('--lr', type=float, default=0.3, help='input learning rate')
     parser.add_argument('--epoch', type=int, default=100, help='input total epoch')
-    parser.add_argument('--data_dir', type=str, default='data', help='set a data directory')
+    parser.add_argument('--data_dir', type=str, default='datasets', help='set a data directory')
     parser.add_argument('--res_dir', type=str, default='results', help='set a result directory')
     parser.add_argument('--model_dir', type=str, default='model', help='set a model directory')
     parser.add_argument('--row', type=int, default=20, help='set SOM row length')
@@ -36,9 +36,25 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # Hyper parameters
-    DATA_DIR = args.data_dir
+    DATA_DIR = args.data_dir + '/' + args.dataset
     RES_DIR = args.res_dir + '/' + args.dataset
     MODEL_DIR = args.model_dir + '/' + args.dataset
+
+    # Create results dir
+    if not os.path.exists(args.res_dir):
+        os.makedirs(args.res_dir)
+
+    # Create results/datasetname dir
+    if not os.path.exists(RES_DIR):
+        os.makedirs(RES_DIR)
+
+    # Create model dir
+    if not os.path.exists(args.model_dir):
+        os.makedirs(args.model_dir)
+
+    # Create model/datasetname dir
+    if not os.path.exists(MODEL_DIR):
+        os.makedirs(MODEL_DIR)
 
     dataset = args.dataset
     batch_size = args.batch_size
